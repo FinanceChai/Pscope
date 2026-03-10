@@ -43,6 +43,9 @@ AFFILIATE_REF = os.getenv("AFFILIATE_REF", "")       # e.g. "?ref=yourcode"
 ADMIN_ID      = int(os.getenv("ADMIN_ID", "0"))       # your Telegram user ID
 CHANNEL_ID    = os.getenv("CHANNEL_ID",  "")          # e.g. "@yourchannel" or "-100123456789"
 
+# Debug: log whether env vars are being picked up
+logger.info(f"BOT_TOKEN set: {BOT_TOKEN != 'YOUR_BOT_TOKEN_HERE'}, ADMIN_ID: {ADMIN_ID}, CHANNEL_ID: {CHANNEL_ID}")
+
 GAMMA_API = "https://gamma-api.polymarket.com"
 DATA_API  = "https://data-api.polymarket.com"
 
