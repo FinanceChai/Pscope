@@ -15,6 +15,8 @@ Admin commands (DM only, ADMIN_ID gated):
 """
 
 import os
+from dotenv import load_dotenv
+load_dotenv()
 import json
 import asyncio
 import logging
