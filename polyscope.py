@@ -46,6 +46,8 @@ CHANNEL_ID    = os.getenv("CHANNEL_ID",  "")          # e.g. "@yourchannel" or "
 # Debug: log whether env vars are being picked up
 logger.info(f"BOT_TOKEN set: {BOT_TOKEN != 'YOUR_BOT_TOKEN_HERE'}, ADMIN_ID: {ADMIN_ID}, CHANNEL_ID: {CHANNEL_ID}")
 logger.info(f"All env keys containing BOT/ADMIN/CHANNEL: {[k for k in os.environ if any(x in k.upper() for x in ['BOT','ADMIN','CHANNEL'])]}")
+logger.info(f"TOTAL env var count: {len(os.environ)}")
+logger.info(f"ALL env var keys: {sorted(os.environ.keys())}")
 
 GAMMA_API = "https://gamma-api.polymarket.com"
 DATA_API  = "https://data-api.polymarket.com"
